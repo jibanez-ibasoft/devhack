@@ -1,39 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     android:background="@color/colorPrimary">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center_vertical"
-        android:layout_marginLeft="@dimen/activity_vertical_margin"
-        android:layout_marginRight="@dimen/activity_vertical_margin">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"/>
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/logo"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:layout_gravity="center_horizontal"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textStyle="bold"
-            android:textSize="32sp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginBottom="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="20dp"/>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/tilEmail">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
@@ -44,17 +40,18 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/tilPassword">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
                 android:inputType="textPassword"/>
-
         </android.support.design.widget.TextInputLayout>
 
         <TextView
+            android:id="@+id/tvForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/forgot_password"
@@ -65,6 +62,7 @@
             android:layout_marginBottom="10dp"/>
 
         <Switch
+            android:id="@+id/swRemember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -72,6 +70,7 @@
             android:switchPadding="5dp"/>
 
         <Button
+            android:id="@+id/btnStart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -81,6 +80,7 @@
             android:layout_marginTop="15dp"/>
 
         <Button
+            android:id="@+id/btnNotHaveAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -91,5 +91,3 @@
 
     </LinearLayout>
 
-
-</LinearLayout>
